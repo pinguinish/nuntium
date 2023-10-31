@@ -20,8 +20,6 @@ List<IconData> icons = const [
   NuntiumIcons.signout,
 ];
 
-const verticalGap = SizedBox(height: 24);
-
 class ExampleUIKit extends StatelessWidget {
   const ExampleUIKit({super.key});
 
@@ -31,24 +29,28 @@ class ExampleUIKit extends StatelessWidget {
       home: Scaffold(
         body: SingleChildScrollView(
           child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                verticalGap,
-                const Text(
-                  "Nuntium UIKit",
-                  style: TextStyle(
-                    fontFamily: 'SFProDisplay',
-                    fontSize: 24,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const SizedBox(height: 48),
+                  const Text(
+                    "Nuntium UIKit",
+                    style: TextStyle(
+                      fontFamily: 'SFProDisplay',
+                      fontSize: 24,
+                    ),
                   ),
-                ),
-                verticalGap,
-                Wrap(
-                  spacing: 20,
-                  alignment: WrapAlignment.center,
-                  children: icons.map((i) => Icon(i)).toList(),
-                ),
-              ],
+                  const SizedBox(height: 24),
+                  Wrap(
+                    spacing: 20,
+                    runSpacing: 20,
+                    alignment: WrapAlignment.center,
+                    children: icons.map((i) => Icon(i)).toList(),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
