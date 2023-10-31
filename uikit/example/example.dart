@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uikit/const/gap.dart';
 import 'package:uikit/const/nuntium_icons.dart';
 
 void main(List<String> args) => runApp(const ExampleUIKit());
@@ -20,6 +21,7 @@ List<IconData> icons = const [
   NuntiumIcons.signout,
 ];
 
+
 class ExampleUIKit extends StatelessWidget {
   const ExampleUIKit({super.key});
 
@@ -30,11 +32,11 @@ class ExampleUIKit extends StatelessWidget {
         body: SingleChildScrollView(
           child: Center(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: Gap.horizontal.defaultSymmetric,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const SizedBox(height: 48),
+                  Gap.vertical.g34,
                   const Text(
                     "Nuntium UIKit",
                     style: TextStyle(
@@ -42,7 +44,7 @@ class ExampleUIKit extends StatelessWidget {
                       fontSize: 24,
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  Gap.vertical.g24,
                   Wrap(
                     spacing: 20,
                     runSpacing: 20,
