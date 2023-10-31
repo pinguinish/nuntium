@@ -84,7 +84,9 @@ flutter:
           weight: 600
         - asset: assets/fonts/sf-pro-display/sf-pro-display-bold.otf
           weight: 700
-
+    - family:  NuntiumIcons
+      fonts:
+       - asset: assets/icons/NuntiumIcons.ttf
 
   #
   # For details regarding fonts from package dependencies,
