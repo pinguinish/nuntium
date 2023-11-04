@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:uikit/const/gap.dart';
 import 'package:uikit/const/nuntium_icons.dart';
+import 'package:uikit/const/nuntium_images.dart';
 import 'package:uikit/widgets/buttons/nuntium_button.dart';
 
 void main(List<String> args) => runApp(const ExampleUIKit());
@@ -38,7 +39,6 @@ class ExampleUIKit extends StatelessWidget {
                 children: [
                   Gap.vertical.g34,
                   const Text(
-                    
                     "Nuntium UIKit",
                     style: TextStyle(
                       fontFamily: 'SFProDisplay',
@@ -61,6 +61,7 @@ class ExampleUIKit extends StatelessWidget {
                       onPressed: () {},
                     ),
                   ),
+                  Gap.vertical.g24,
                 ],
               ),
             ),
