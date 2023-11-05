@@ -3,6 +3,7 @@ import 'package:uikit/const/gap.dart';
 import 'package:uikit/const/nuntium_icons.dart';
 import 'package:uikit/const/nuntium_images.dart';
 import 'package:uikit/widgets/buttons/nuntium_button.dart';
+import 'package:uikit/widgets/buttons/nuntium_button_style.dart';
 
 void main(List<String> args) => runApp(const ExampleUIKit());
 
@@ -54,14 +55,35 @@ class ExampleUIKit extends StatelessWidget {
                     children: icons.map((i) => Icon(i)).toList(),
                   ),
                   Gap.vertical.g24,
-                  SizedBox(
-                    width: double.infinity,
-                    child: NuntiumButton(
-                      label: 'Next',
-                      onPressed: () {},
-                    ),
+                  NuntiumButton(
+                    label: 'Next',
+                    onPressed: () {},
                   ),
                   Gap.vertical.g24,
+                  NuntiumButton.icon(
+                    label: "Sign in with Google",
+                    onPressed: () {},
+                    icon: Image.asset(NuntiumImages.google),
+                    style: NuntiumButton.styles.socialMedia,
+                  ),
+                  Gap.vertical.g24,
+                  Wrap(
+                    alignment: WrapAlignment.center,
+                    spacing: 10,
+                    runSpacing: 10,
+                    children: [
+                      NuntiumButton.icon(
+                        label: "Envelope",
+                        onPressed: () {},
+                        icon: const Icon(NuntiumIcons.envelope),
+                      ),
+                      NuntiumButton.icon(
+                        label: "Home",
+                        onPressed: () {},
+                        icon: const Icon(NuntiumIcons.home),
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
