@@ -1,9 +1,11 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:uikit/const/gap.dart';
 import 'package:uikit/const/nuntium_icons.dart';
 import 'package:uikit/const/nuntium_images.dart';
 import 'package:uikit/widgets/buttons/nuntium_button.dart';
-import 'package:uikit/widgets/buttons/nuntium_button_style.dart';
+import 'package:uikit/widgets/inputs/pin_code.dart';
 
 void main(List<String> args) => runApp(const ExampleUIKit());
 
@@ -83,7 +85,13 @@ class ExampleUIKit extends StatelessWidget {
                         icon: const Icon(NuntiumIcons.home),
                       ),
                     ],
-                  )
+                  ),
+                  Gap.vertical.g24,
+                  PincodeInput(
+                    countSymbols: 4,
+                    onChanged: (value) => log("Pincode(onChanged): $value"),
+                    onComplete: (value) => log("Pincode(onComplete): $value"),
+                  ),
                 ],
               ),
             ),
